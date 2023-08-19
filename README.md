@@ -35,7 +35,7 @@
             return (T)o;
         }
    12. Las dos APIs se encuentran funcionando en modo local del ambiente de desarrollo, es necesario desplegarlas para su correcto funcionamiento.
-   13. Para realizar una prueba de integración completa, se debe ejecutar el script adjunto en el repositorio para la creación de la base de datos llamada PRU_MOK,
+   13. Para realizar una prueba de integración completa, se debe ejecutar el script (GrupoMok-Artefactos/Script-PRU_MOK) adjunto en el repositorio para la creación de la base de datos llamada PRU_MOK,
    realizar las modificaciones en el archivo appsettings.json con base en el ambiente que se instale, exponer la APi Principal APINetMok y ApiExternaMok, para que así pueda ser consumida Api Externa.
    
 
