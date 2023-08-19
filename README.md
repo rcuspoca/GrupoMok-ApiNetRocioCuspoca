@@ -15,6 +15,25 @@
    siguiente llamado:  TipoIdentificacionModel tipoIdentificacion = await _servicioExternoApi.GetTipoDocumentoByAbreviatura(estudiante.TipoIdentificacion).
 9. Para instanciar la segunda Api, se configura el appsetting.json con este parámetros: "ServicioExternoApi": {
     "LocalUrl": "https://localhost:7269/TipoDocumento/" }   y en el archivo setup.cs se realiza inyección de dependencia del servicio externo, usando esta instrucción: services.AddScoped<IServicioExternoApi, ServicioExternoApi>().
+10. La comunicación entre las dos Apis se realiza por HTTP, usando estas instrucciones:
+11. public static async Task<T> GetAsync<T>(string url)
+        {
+            T data;
+
+            using (HttpClient client = new())
+            {                
+                using HttpResponseMessage response = await client.GetAsync(url);
+                using HttpContent content = response.Content;
+                string d = await content.ReadAsStringAsync();
+                if (d != null)
+                {
+                    data = JsonConvert.DeserializeObject<T>(d);
+                    return data;
+                }
+            }
+            object o = new();
+            return (T)o;
+        }
    
    
    
