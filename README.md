@@ -1,5 +1,5 @@
 # APINetMok
-1. Se crea una API llamada APINetMok para un sistema de préstamos, con 3 controladores llamados Estudiante.Controller, Libro.Controller y Prestamo.Controller, donde a cada uno se le aplica el CRUD con métodos de petición: GET, POST, PUT, DELETE.
+1. Se crea una API principal llamada APINetMok para un sistema de préstamos, con 3 controladores llamados Estudiante.Controller, Libro.Controller y Prestamo.Controller, donde a cada uno se le aplica el CRUD con métodos de petición: GET, POST, PUT, DELETE.
 2.  El desarrollo está basado en un sistema de préstamo de libros, donde se usan 4 tablas llamadas Estudiante, Libro, Prestamo, TipoIdentificacion.
 3. La tabla Prestamo tiene dependencia de la tabla Estudiante y Libro.
 4. Se usa el ORM(Object Relational Mapping) : EntityFramework instalando el paquete Microsoft.EntityFrameworkCore.SqlServer.
@@ -34,10 +34,9 @@
             object o = new();
             return (T)o;
         }
+   12. Las dos APIs se encuentran funcionando en modo local del ambiente de desarrollo, es necesario desplegarlas para su correcto funcionamiento.
+   13. Para realizar una prueba de integración completa, se debe ejecutar el script adjunto en el repositorio para la creación de la base de datos llamada PRU_MOK,
+   realizar las modificaciones en el archivo appsettings.json con base en el ambiente que se instale, exponer la APi Principal APINetMok y ApiExternaMok, para que así pueda ser consumida Api Externa.
    
-   
-   
-El estado del proyecto, que es particularmente importante si el proyecto está todavía en desarrollo. ...
-Los requisitos del entorno de desarrollo para la integración.
-Una guía para la instalación y el funcionamiento.
+
 
