@@ -10,8 +10,10 @@
    Liskov Substitution: Se usa las clases padre como EstudianteModel, LibroModel, PrestamoModel cuyos atributos se heredan para las clases Dto.
    Interface Segregation: Se crean interfaces de tal forma que cada una tenga su propia responsabilidad y no se implementen métodos que no necesita.
    Dependency Inversion: Se aplica la inyección de dependencias que permite instanciar clases y suministrar las dependencias enviando parámetros a través del constructor.
-7.
-8. Se crea una segunda API llamada ApiExternaMok, para realizar la consulta de los tipos de documento de la identificación del estudiante.
+7. Se crea una segunda API llamada ApiExternaMok, para realizar la consulta de los tipos de documento de la identificación del estudiante.
+8. La Api: ApiExternaMok es invocada por la Api: APINetMok, al momento de crear un estudiante, realiza la consulta del IdTipoDocumento a través del TipoDocumento con el
+   siguiente llamado:  TipoIdentificacionModel tipoIdentificacion = await _servicioExternoApi.GetTipoDocumentoByAbreviatura(estudiante.TipoIdentificacion);
+   
    
    
    
