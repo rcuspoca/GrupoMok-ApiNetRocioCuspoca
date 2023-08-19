@@ -14,7 +14,7 @@
 8. La Api: ApiExternaMok es invocada por la Api: APINetMok, al momento de crear un estudiante, realiza la consulta del IdTipoDocumento a través del TipoIdentificacion con el
    siguiente llamado:  TipoIdentificacionModel tipoIdentificacion = await _servicioExternoApi.GetTipoDocumentoByAbreviatura(estudiante.TipoIdentificacion).
 9. Para instanciar la segunda Api, se configura el appsetting.json con este parámetros: "ServicioExternoApi": {
-    "LocalUrl": "https://localhost:7269/TipoDocumento/" }   y en el archivo setup.cs se realiza inyección de dependencia del servicio externo, usando esta instrucción: services.AddScoped<IServicioExternoApi, ServicioExternoApi>();
+    "LocalUrl": "https://localhost:7269/TipoDocumento/" }   y en el archivo setup.cs se realiza inyección de dependencia del servicio externo, usando esta instrucción: services.AddScoped<IServicioExternoApi, ServicioExternoApi>().
    
    
    
