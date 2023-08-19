@@ -12,9 +12,7 @@
    Dependency Inversion: Se aplica la inyección de dependencias que permite instanciar clases y suministrar las dependencias enviando parámetros a través del constructor.
 7. Se crea una segunda API llamada ApiExternaMok, para realizar la consulta de los tipos de documento de la identificación del estudiante.
 8. La Api: ApiExternaMok es invocada por la Api: APINetMok, al momento de crear un estudiante, realiza la consulta del IdTipoDocumento a través del TipoDocumento con el
-   siguiente llamado:  TipoIdentificacionModel tipoIdentificacion = await _servicioExternoApi.GetTipoDocumentoByAbreviatura(estudiante.TipoIdentificacion);
-   
-   
+   siguiente llamado:  TipoIdentificacionModel tipoIdentificacion = await _servicioExternoApi.GetTipoDocumentoByAbreviatura(estudiante.TipoIdentificacion)
    
    
    
